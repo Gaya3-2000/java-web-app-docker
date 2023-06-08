@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: javawebapp-ENVIRONMENT-BUILD-NUMBER
+  name: javadeploy
 spec:
   replicas: 1
   template:
@@ -10,7 +10,7 @@ spec:
         app: javawebapp
     spec:
       containers:
-      - name: javawebapp-ENVIRONMENT-BUILD-NUMBER
+      - name: javacont
         image: gayathri1122/k8s:1.0
         imagePullPolicy: IfNotPresent
         ports:
