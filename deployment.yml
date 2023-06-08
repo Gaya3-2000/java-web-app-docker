@@ -2,8 +2,13 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: javadeploy
+  labels: 
+    app: javawebapp
 spec:
   replicas: 1
+  selector:
+    matchLabels:
+      app: javawebapp
   template:
     metadata:
       labels:
