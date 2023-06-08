@@ -1,17 +1,16 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: javawebapp-ENVIRONMENT-BUILD_NUMBER
+  name: javawebapp-ENVIRONMENT-BUILD-NUMBER
 spec:
   replicas: 1
   template:
     metadata:
       labels:
         app: javawebapp
-        version: "BUILD_NUMBER"
     spec:
       containers:
-      - name: javawebapp-ENVIRONMENT-BUILD_NUMBER
+      - name: javawebapp-ENVIRONMENT-BUILD-NUMBER
         image: gayathri1122/k8s:1.0
         imagePullPolicy: IfNotPresent
         ports:
